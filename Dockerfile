@@ -77,6 +77,9 @@ ENV MAGENTO_SAMPLE_DATA_FILE /root/_magento_sample_data/magento-sample-data-1.9.
 
 RUN test -f $MAGENTO_SAMPLE_DATA_FILE || curl -Lo $MAGENTO_SAMPLE_DATA_FILE $MAGENTO_SAMPLE_DATA_URL
 
+# Enable displaying exception information on screen
+RUN mv /var/www/htdocs/errors/local.xml.sample /var/www/htdocs/errors/local.xml
+
 # Bring in bin/ files
 COPY bin/* /usr/local/bin/
 
