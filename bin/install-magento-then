@@ -65,7 +65,8 @@ if ($magentoInstalled) {
     $nextCommand = implode(' ', array_map('escapeshellarg', array_slice($argv, 1)));
 
     if ($nextCommand) {
-        passthru($nextCommand);
+        passthru($nextCommand, $return);
+        exit($return);
     } else {
         exit(0);
     }
