@@ -167,8 +167,7 @@ class DockerMagentoInstaller
             'dbName'             => $this->dbName,
             'installationFolder' => $this->installationFolder,
             'noDownload'         => true,
-            // NOTE: 'forceUseDb' arg requires a value, just providing it is not enough.
-            'forceUseDb'         => 'true',
+            'forceUseDb'         => true,
         );
 
         if ($this->debug) {
