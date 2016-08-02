@@ -1,6 +1,6 @@
 # Docker image providing Magento 1.9 running on PHP 5.5.
 # Adapted from https://github.com/occitech/docker/blob/master/magento/php5.5/apache/Dockerfile
-FROM php:5.5-apache
+FROM php:5.5.36-apache
 
 RUN requirements="libpng12-dev libmcrypt-dev libmcrypt4 libcurl3-dev libfreetype6 libjpeg62-turbo libpng12-dev libfreetype6-dev libjpeg62-turbo-dev libxml2-dev mysql-client-5.5" \
     && apt-get update && apt-get install -y $requirements && rm -rf /var/lib/apt/lists/* \
