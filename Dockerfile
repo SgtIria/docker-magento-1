@@ -42,7 +42,7 @@ RUN curl -Lo /usr/local/bin/composer https://getcomposer.org/composer.phar && \
 # Install Magento files locally
 # We can't run the DB installation as part of the Docker build process because it involves a linked
 # container. So instead we *download* the Magento source files and extract them.
-ENV MAGENTO_VERSION 1.9.2.2
+ENV MAGENTO_VERSION 1.9.3.0
 ENV MAGENTO_VERSION_BY_NAME magento-mirror-$MAGENTO_VERSION
 
 RUN n98-magerun install \
